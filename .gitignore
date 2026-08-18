@@ -1,0 +1,10 @@
+__pycache__/
+.venv/
+venv/
+outputs/
+*.png
+.DS_Store
+
+# Keep datasets local; do not push CSVs to GitHub
+*.csv
+!data/*.example.csv

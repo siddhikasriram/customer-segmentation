@@ -1,5 +1,32 @@
 # Customer Segmentation Analysis: K-Means Clustering
 
+## How to run
+
+The analysis now runs as a Streamlit app.
+
+CSV datasets are **not** stored on GitHub. Keep `visitItemSpend.csv` on your machine in `data/` (same filename and columns as `data/visitItemSpend.example.csv`). Docker Compose mounts that folder at runtime. You can also upload a CSV in the app sidebar.
+
+### Docker
+
+```bash
+docker compose up --build
+```
+
+Open [http://localhost:8501](http://localhost:8501).
+
+### Local
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+streamlit run app.py --server.address=0.0.0.0 --server.port=8501
+```
+
+Then open [http://localhost:8501](http://localhost:8501).
+
+---
+
 ## Introduction
 
 In this report, we present an analysis of customer data from an electronic retailer with the goal of clustering customers based on three key attributes: visits, number of items bought, and spending amount.
